@@ -24,6 +24,11 @@ test('divide 60 / 12  to equal 5', () => {
   expect(calculator.divide(60, 12)).toBe(5);
 });
 
+test('returns error when dividing by 0', () => {
+  expect(() => calculator.divide(10, 0)).toThrow('Division by zero is impossible');
+});
+
+
 test('multiply 6 * 7 to equal 42', () => {
   expect(calculator.multiply(6, 7)).toBe(42);
 });
